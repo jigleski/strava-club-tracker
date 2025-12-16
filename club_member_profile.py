@@ -34,12 +34,11 @@ def get_club_member(client: Client) -> ClubMember:
 
 
 if __name__ == "__main__":
-    # client = get_client()
-    # member = get_club_member(client)
-    # save_current_token(client)
-
-    with open(f"ClubMember_{14045511}.json", "r") as fid:
+    client = get_client()
+    member = get_club_member(client)
+    save_current_token(client)
+    with open(f"ClubMember_{member.athlete,id}.json", "r") as fid:
         _member = ClubMember.model_validate_json(fid.read())
-    with open(f"ClubMember_{14045511}.json", "w") as fid:
+    with open(f"ClubMember_{member.athlete,id}.json", "w") as fid:
         fid.write(_member.model_dump_json(indent=2, ensure_ascii=True, exclude_none=True))
     pass
