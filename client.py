@@ -12,11 +12,6 @@ CLIENT_SECRET = os.environ.get("STRAVA_CLIENT_SECRET")
 REDIRECT_URL = "http://127.0.0.1:5000/authorization" #This can be any local URL you can access
 TOKEN_FILENAME = "token.txt"
 
-#TEMP: hardcoded for now
-#TODO: remove before pushing commit to public repo
-CLIENT_ID="190570"
-CLIENT_SECRET="6fe9c211f9005c29b02696b842a1e7ce8740da4c"
-
 TOKEN_CLIENT_MAP = {
     "access_token": "access_token",
     "refresh_token": "refresh_token",
